@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/tabhost">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|top"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f2f2">
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/closeButton"
+                            android:background="#f5f2f2"
+                            android:onClick="gotohome" />
+                    </LinearLayout>
+
+                    <GridView
+                        android:layout_width="fill_parent"
+                        android:layout_height="400dp"
+                        android:id="@+id/gridView"
+                        android:columnWidth="90dp"
+                        android:numColumns="auto_fit"
+                        android:verticalSpacing="10dp"
+                        android:horizontalSpacing="10dp"
+                        android:stretchMode="columnWidth"
+                        android:gravity="center"
+                        android:background="#f5f2f2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f2f2">
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/closeButton2"
+                            android:background="#f5f2f2"
+                            android:onClick="gotohome" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:id="@+id/camera_preview"
+                        android:background="#f5f2f2"
+                        android:focusable="false" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capture"
+                        android:id="@+id/capture"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#f5f2f2"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="561dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f2f2">
+
+                        <ImageButton
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/closeButton3"
+                            android:background="#f5f2f2"
+                            android:onClick="gotohome" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </TabHost>
+</RelativeLayout>
